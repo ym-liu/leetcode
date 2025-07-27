@@ -12,10 +12,10 @@ class Solution {
         int nums1Index = m - 1;
         int nums2Index = n - 1;
         for (int i = m + n - 1; i >= 0; i--) {
-            if (nums2Index < 0 || nums1[nums1Index] >= nums2[nums2Index]) {
+            if (nums2Index < 0 || (nums1Index >= 0 && nums1[nums1Index] >= nums2[nums2Index])) {
                 nums1[i] = nums1[nums1Index];
                 nums1Index--;
-            } else { // (nums1Index < 0 || nums1[nums1Index] < nums2[nums2Index])
+            } else {
                 nums1[i] = nums2[nums2Index];
                 nums2Index--;
             }
