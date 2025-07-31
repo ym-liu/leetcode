@@ -23,7 +23,7 @@ function removeDuplicates(nums: number[]): number {
             nums[i] = nums[switchIdx];
         }
 
-        // increment num of unique elements and switchIdx
+        // increment num of unique elements
         numUniqueElements++;
     }
 
